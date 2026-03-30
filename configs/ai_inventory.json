@@ -1,0 +1,242 @@
+{
+  "organisation": "NovaPay",
+  "inventory_version": "1.0",
+  "last_updated": "2026-03-01",
+  "inventory_owner": "AI Governance Team",
+  "systems": [
+    {
+      "system_id": "NP-001",
+      "system_name": "Credit Scoring Engine",
+      "purpose": "Assesses creditworthiness and determines loan eligibility for individual applicants",
+      "data_sources": [
+        "Applicant financial history",
+        "Credit bureau data",
+        "Income verification records",
+        "Transaction history"
+      ],
+      "business_impact": "HIGH — incorrect scoring may deny individuals access to credit or result in financial losses for NovaPay",
+      "system_owner": "Head of Credit Risk",
+      "review_cycle": "6 months",
+      "affects_individuals": true,
+      "automated_decision": true,
+      "human_oversight_notes": "Loan officers review all decisions above £10,000 threshold; all automated rejections can be appealed and reviewed by a human underwriter within 5 business days",
+      "sector": "Financial Services",
+      "deployment_date": "2022-03-15",
+      "vendor_or_inhouse": "In-house",
+      "eu_ai_act_classification": {
+        "risk_tier": "HIGH RISK",
+        "annex_ref": "Annex III §5(b) — AI systems used in credit scoring, insurance, or access to financial services",
+        "obligations": [
+          "Article 9  — Establish a risk management system for the lifecycle of the AI system",
+          "Article 10 — Implement data governance practices (quality, relevance, bias checks)",
+          "Article 11 — Maintain technical documentation before placing on market",
+          "Article 12 — Enable logging and traceability of system operations",
+          "Article 13 — Ensure transparency to users about the system's nature and limitations",
+          "Article 14 — Implement meaningful human oversight mechanisms",
+          "Article 15 — Ensure accuracy, robustness, and cybersecurity throughout lifecycle"
+        ],
+        "reasoning": "'Credit Scoring Engine' operates in the Financial Services sector (covered by Annex III §5(b)), directly affects individuals, and makes automated decisions without requiring prior human review. This combination places it firmly within the HIGH RISK tier under Annex III. The organisation must satisfy Articles 9–15 obligations before deployment and on an ongoing basis."
+      },
+      "nist_rmf_mapping": {
+        "GOVERN": [
+          "GOV-1.1",
+          "GOV-1.2",
+          "GOV-2.1",
+          "GOV-4.1",
+          "GOV-6.1"
+        ],
+        "MAP": [
+          "MAP-1.1",
+          "MAP-1.5",
+          "MAP-2.1",
+          "MAP-3.1",
+          "MAP-5.1"
+        ],
+        "MEASURE": [
+          "MS-1.1",
+          "MS-2.1",
+          "MS-2.5",
+          "MS-2.6",
+          "MS-4.1"
+        ],
+        "MANAGE": [
+          "MG-1.1",
+          "MG-2.1",
+          "MG-2.4",
+          "MG-3.1",
+          "MG-4.1"
+        ]
+      }
+    },
+    {
+      "system_id": "NP-002",
+      "system_name": "Fraud Detection System",
+      "purpose": "Identifies potentially fraudulent transactions in real-time and triggers automatic holds or alerts",
+      "data_sources": [
+        "Transaction data",
+        "Device fingerprinting",
+        "Geolocation data",
+        "Behavioural analytics",
+        "Merchant category codes"
+      ],
+      "business_impact": "HIGH — false positives block legitimate transactions; false negatives allow fraud losses",
+      "system_owner": "Head of Financial Crime",
+      "review_cycle": "3 months",
+      "affects_individuals": true,
+      "automated_decision": true,
+      "human_oversight_notes": "Fraud analysts review all accounts flagged for suspension within 2 hours; customers can challenge holds via the in-app dispute flow, triggering human review within 24 hours",
+      "sector": "Financial Services",
+      "deployment_date": "2021-11-01",
+      "vendor_or_inhouse": "Hybrid (vendor model + in-house rules)",
+      "eu_ai_act_classification": {
+        "risk_tier": "HIGH RISK",
+        "annex_ref": "Annex III §5(b) — AI systems used in credit scoring, insurance, or access to financial services",
+        "obligations": [
+          "Article 9  — Establish a risk management system for the lifecycle of the AI system",
+          "Article 10 — Implement data governance practices (quality, relevance, bias checks)",
+          "Article 11 — Maintain technical documentation before placing on market",
+          "Article 12 — Enable logging and traceability of system operations",
+          "Article 13 — Ensure transparency to users about the system's nature and limitations",
+          "Article 14 — Implement meaningful human oversight mechanisms",
+          "Article 15 — Ensure accuracy, robustness, and cybersecurity throughout lifecycle"
+        ],
+        "reasoning": "'Fraud Detection System' operates in the Financial Services sector (covered by Annex III §5(b)), directly affects individuals, and makes automated decisions without requiring prior human review. This combination places it firmly within the HIGH RISK tier under Annex III. The organisation must satisfy Articles 9–15 obligations before deployment and on an ongoing basis."
+      },
+      "nist_rmf_mapping": {
+        "GOVERN": [
+          "GOV-1.1",
+          "GOV-1.2",
+          "GOV-2.1",
+          "GOV-4.1",
+          "GOV-6.1"
+        ],
+        "MAP": [
+          "MAP-1.1",
+          "MAP-1.5",
+          "MAP-2.1",
+          "MAP-3.1",
+          "MAP-5.1"
+        ],
+        "MEASURE": [
+          "MS-1.1",
+          "MS-2.1",
+          "MS-2.5",
+          "MS-2.6",
+          "MS-4.1"
+        ],
+        "MANAGE": [
+          "MG-1.1",
+          "MG-2.1",
+          "MG-2.4",
+          "MG-3.1",
+          "MG-4.1"
+        ]
+      }
+    },
+    {
+      "system_id": "NP-003",
+      "system_name": "Customer Support Chatbot",
+      "purpose": "Handles tier-1 customer queries via chat interface; escalates unresolved issues to human agents",
+      "data_sources": [
+        "Customer account data",
+        "Product FAQs",
+        "Conversation history",
+        "CRM records"
+      ],
+      "business_impact": "MEDIUM — poor responses increase churn and support ticket volume; no direct financial decisions made",
+      "system_owner": "Head of Customer Experience",
+      "review_cycle": "12 months",
+      "affects_individuals": true,
+      "automated_decision": false,
+      "human_oversight_notes": "All conversations can be escalated to a human agent on request; chatbot cannot initiate account changes without human confirmation",
+      "sector": "General Purpose",
+      "deployment_date": "2023-06-20",
+      "vendor_or_inhouse": "Vendor (third-party LLM)",
+      "eu_ai_act_classification": {
+        "risk_tier": "LIMITED RISK",
+        "annex_ref": "Article 50 — Transparency obligations for certain AI systems",
+        "obligations": [
+          "Article 50(1) — Inform users they are interacting with an AI system (not a human)",
+          "Article 50(2) — Disclose when AI-generated content (text, images) is produced"
+        ],
+        "reasoning": "'Customer Support Chatbot' interacts directly with customers via a conversational interface and is powered by a third-party LLM vendor. Under Article 50 of the EU AI Act, the organisation must clearly disclose to users that they are interacting with an AI system and not a human. No Annex III classification applies. Obligations are limited to transparency disclosures."
+      },
+      "nist_rmf_mapping": {
+        "GOVERN": [
+          "GOV-1.1",
+          "GOV-1.2",
+          "GOV-2.1",
+          "GOV-4.1"
+        ],
+        "MAP": [
+          "MAP-1.1",
+          "MAP-1.5",
+          "MAP-2.1",
+          "MAP-3.1"
+        ],
+        "MEASURE": [
+          "MS-1.1",
+          "MS-4.1"
+        ],
+        "MANAGE": [
+          "MG-1.1",
+          "MG-3.1",
+          "MG-4.1"
+        ]
+      }
+    },
+    {
+      "system_id": "NP-004",
+      "system_name": "Marketing Personalisation AI",
+      "purpose": "Segments customers and personalises product offers and email campaigns based on behavioural patterns",
+      "data_sources": [
+        "Browsing behaviour",
+        "Transaction history",
+        "Demographic segments",
+        "Campaign engagement data"
+      ],
+      "business_impact": "LOW — suboptimal targeting reduces campaign ROI; no direct impact on individuals' rights or access to services",
+      "system_owner": "Head of Marketing",
+      "review_cycle": "12 months",
+      "affects_individuals": true,
+      "automated_decision": false,
+      "human_oversight_notes": "Marketing team reviews all campaign targeting rules quarterly; no individual-level automated decisions made",
+      "sector": "Marketing",
+      "deployment_date": "2023-09-10",
+      "vendor_or_inhouse": "In-house",
+      "eu_ai_act_classification": {
+        "risk_tier": "MINIMAL RISK",
+        "annex_ref": "No mandatory provisions — Recital 48 and voluntary codes of practice apply",
+        "obligations": [
+          "No mandatory obligations under the EU AI Act",
+          "Voluntary: Consider adopting codes of conduct under Article 95",
+          "Voluntary: Maintain internal documentation as good governance practice"
+        ],
+        "reasoning": "'Marketing Personalisation AI' does not appear in Annex III prohibited or high-risk categories, does not interact with individuals via a conversational interface, and does not make decisions that significantly affect individuals' rights or access to services. It falls into the MINIMAL RISK tier. No mandatory EU AI Act obligations apply, though voluntary codes of practice are encouraged."
+      },
+      "nist_rmf_mapping": {
+        "GOVERN": [
+          "GOV-1.1",
+          "GOV-1.2",
+          "GOV-2.1",
+          "GOV-4.1"
+        ],
+        "MAP": [
+          "MAP-1.1",
+          "MAP-1.5",
+          "MAP-2.1",
+          "MAP-3.1"
+        ],
+        "MEASURE": [
+          "MS-1.1",
+          "MS-4.1"
+        ],
+        "MANAGE": [
+          "MG-1.1",
+          "MG-3.1",
+          "MG-4.1"
+        ]
+      }
+    }
+  ]
+}
