@@ -14,11 +14,11 @@
 
 ## 📌 Project Overview
 
-I built a complete, end-to-end **AI Governance framework** for a financial services client that had no visibility into what AI systems it was running, how risky they were, or what regulatory obligations applied to each one.
+In this project I built a complete end-to-end **AI Governance framework** for a financial services client that had no visibility into what AI systems it was running, how risky they were or what regulatory obligations applied to each one.
 
-The engagement covered four production AI systems across credit scoring, fraud detection, customer support, and marketing. I designed and delivered a structured inventory, applied EU AI Act risk classification with documented legal reasoning, mapped every system to the NIST AI Risk Management Framework, and produced an automated governance report ready for leadership and regulatory review.
+The engagement covered four production AI systems across credit scoring, fraud detection, customer support and marketing. I designed and delivered a structured inventory, applied EU AI Act risk classification with documented legal reasoning, mapped every system to the NIST AI Risk Management Framework and produced an automated governance report ready for leadership and regulatory review.
 
-> **The core problem I solved:** The client could not answer a basic but critical question — *"What AI systems are we operating, and are we compliant?"* This project gave them a defensible, auditable answer.
+> **The core problem I solved:** The client could not answer a basic but critical question - *"What AI systems are we operating, and are we compliant?"* This project gave them a defensible and auditable answer.
 
 ---
 
@@ -26,7 +26,7 @@ The engagement covered four production AI systems across credit scoring, fraud d
 
 | Deliverable | Description |
 |---|---|
-| **AI System Inventory** | Structured CSV + JSON capturing all AI systems, owners, data sources, and review cycles |
+| **AI System Inventory** | Structured CSV + JSON capturing all AI systems, owners, data sources and review cycles |
 | **EU AI Act Classification** | Risk-tiered classification for each system with full legal reasoning and obligations |
 | **NIST AI RMF Mapping** | Control mapping across all four RMF functions per system, proportionate to risk |
 | **Automated Validator** | Python script that checks inventory completeness and flags governance gaps |
