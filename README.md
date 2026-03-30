@@ -16,7 +16,7 @@
 
 In this project I built a complete end-to-end **AI Governance framework** for a financial services client that had no visibility into what AI systems it was running, how risky they were or what regulatory obligations applied to each one.
 
-The engagement covered four production AI systems across credit scoring, fraud detection, customer support and marketing. I designed and delivered a structured inventory, applied EU AI Act risk classification with documented legal reasoning, mapped every system to the NIST AI Risk Management Framework and produced an automated governance report ready for leadership and regulatory review.
+This assessment covered four production AI systems across credit scoring, fraud detection, customer support and marketing. I designed and delivered a structured inventory, applied EU AI Act risk classification with documented legal reasoning, mapped every system to the NIST AI Risk Management Framework and produced an automated governance report ready for leadership and regulatory review.
 
 > **The core problem I solved:** The client could not answer a basic but critical question - *"What AI systems are we operating, and are we compliant?"* This project gave them a defensible and auditable answer.
 
@@ -195,12 +195,12 @@ AI-System-Inventory/
 
 ## 🧠 Skills Demonstrated
 
-- **AI Governance** — Operationalising regulatory frameworks into structured, auditable artifacts
-- **EU AI Act** — Risk-tier classification with documented legal reasoning across Annex III categories
-- **NIST AI RMF** — Proportionate control mapping across GOVERN / MAP / MEASURE / MANAGE
-- **Python Automation** — Inventory validation and automated report generation pipelines
-- **Regulatory Analysis** — Translating legal text into actionable compliance obligations
-- **Technical Writing** — Executive-ready governance documentation from structured data
+- **AI Governance** - Operationalising regulatory frameworks into structured, auditable artifacts
+- **EU AI Act** - Risk-tier classification with documented legal reasoning across Annex III categories
+- **NIST AI RMF** - Proportionate control mapping across GOVERN / MAP / MEASURE / MANAGE
+- **Python Automation** - Inventory validation and automated report generation pipelines
+- **Regulatory Analysis** - Translating legal text into actionable compliance obligations
+- **Technical Writing** - Executive-ready governance documentation from structured data
 
 ---
 
