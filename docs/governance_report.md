@@ -12,7 +12,7 @@
 NorthPoint Financial Services operates four AI systems across its credit, fraud, customer support and marketing functions. This report presents the findings of a structured governance assessment covering EU AI Act risk classification, NIST AI Risk Management Framework control mapping and identification of priority compliance actions.
 
 **Key findings:**
-- **2 of 4 systems (50%)** carry HIGH RISK classification under EU AI Act Annex III and are subject to mandatory obligations under Articles 9–15
+- **2 of 4 systems (50%)** carry HIGH RISK classification under EU AI Act Annex III and are subject to mandatory obligations under Articles 9-15
 - **2 of 4 systems** carry Limited or Minimal Risk classification with proportionate, lighter-touch obligations
 - **26 governance controls** are active across the portfolio; HIGH RISK systems each carry a full 20-control suite
 - **1 priority action** is required before the next regulatory cycle: formal conformity assessment for NP-001 (Credit Scoring Engine)
@@ -37,7 +37,7 @@ NorthPoint Financial Services operates four AI systems across its credit, fraud,
 
 ## 2. EU AI Act Compliance Status
 
-### 2.1 HIGH RISK Systems (Articles 9–15)
+### 2.1 HIGH RISK Systems (Articles 9-15)
 
 Both NP-001 and NP-002 are classified HIGH RISK under EU AI Act Annex III, Category 5(b) - AI systems used in financial services that determine access to credit or financial resources.
 
