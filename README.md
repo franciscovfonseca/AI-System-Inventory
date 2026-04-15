@@ -5,7 +5,7 @@ GOOGLE FLOW PROMPT:
 "A clean, professional dark-themed banner for a GitHub repository. Wide format (1280x640px). 
 Title text: 'AI System Inventory & Classification Engine'. Subtitle: 'EU AI Act · NIST AI RMF · Financial Services'.
 Dark navy blue background (#0d1117). Subtle grid or circuit-board pattern. 
-Icons representing AI systems, compliance documents, and data flows. 
+Icons representing AI systems, compliance documents and data flows. 
 Modern, corporate, minimal. No people. Color accents: electric blue and white."
 -->
 <img src="banner.png" alt="AI System Inventory & Classification Engine" width="100%"/>
@@ -19,7 +19,7 @@ Modern, corporate, minimal. No people. Color accents: electric blue and white."
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)]()
 
-**Phase 1 of an end-to-end AI Governance Programme · [→ Phase 2: AI Risk Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
+**Phase 1 of an end-to-end AI Governance Programme · → [Phase 2: AI Risk Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
 
 </div>
 
@@ -27,13 +27,13 @@ Modern, corporate, minimal. No people. Color accents: electric blue and white."
 
 ## 📌 Project Overview
 
-**NorthPoint Financial Services** — a mid-size financial institution operating in the EU — had no centralised visibility into its AI systems. Leadership could not answer the most fundamental governance question: *"What AI are we running, how risky is it, and are we compliant?"*
+**NorthPoint Financial Services** - a mid-size financial institution operating in the EU - had no centralised visibility into its AI systems. Leadership could not answer the most fundamental governance question: *"What AI are we running, how risky is it and are we compliant?"*
 
-This project delivered that answer. I designed and executed a complete AI system inventory programme covering four production AI systems across credit, fraud, customer support, and marketing. The output: a structured inventory, EU AI Act risk classification with full legal reasoning, NIST AI RMF control mapping, automated governance validation, and an executive report ready for board and regulatory review.
+This project delivered that answer. I designed and executed a complete AI system inventory programme covering four production AI systems across credit, fraud, customer support and marketing. The output: a structured inventory, EU AI Act risk classification with full legal reasoning, NIST AI RMF control mapping, automated governance validation and an executive report ready for board and regulatory review.
 
-> **The business impact:** NorthPoint can now demonstrate to regulators, auditors, and the board exactly which AI systems it operates, what risk tier each carries, what obligations apply, and what controls are in place — with documented, auditable evidence for every decision.
+> **The business impact:** NorthPoint can now demonstrate to regulators, auditors and the board exactly which AI systems it operates, what risk tier each carries, what obligations apply and what controls are in place - with documented, auditable evidence for every decision.
 
-This project is **Phase 1** of an ongoing AI governance programme. Phase 2 applies deep risk assessment methodology to the two HIGH RISK systems identified here. [→ View Phase 2](https://github.com/franciscovfonseca/AI-Risk-Assessment)
+This project is **Phase 1** of an ongoing AI governance programme. Phase 2 applies deep risk assessment methodology to the two HIGH RISK systems identified here. → [View Phase 2](https://github.com/franciscovfonseca/AI-Risk-Assessment)
 
 ---
 
@@ -97,7 +97,7 @@ flowchart TD
 I applied the EU AI Act's four-tier risk model to each system, with documented reasoning for every classification decision.
 
 ```mermaid
-pie title EU AI Act Risk Distribution — NorthPoint Financial Services
+pie title EU AI Act Risk Distribution - NorthPoint Financial Services
     "HIGH RISK (Annex III)" : 2
     "LIMITED RISK (Article 50)" : 1
     "MINIMAL RISK" : 1
@@ -105,12 +105,12 @@ pie title EU AI Act Risk Distribution — NorthPoint Financial Services
 
 | System | Risk Tier | Regulatory Basis | Key Obligations |
 |---|---|---|---|
-| 🔴 Credit Scoring Engine | **HIGH RISK** | Annex III §5(b) — creditworthiness assessment | Articles 9–15: risk management system, data governance, human oversight, transparency, logging |
-| 🔴 Fraud Detection System | **HIGH RISK** | Annex III §5(b) — financial services | Articles 9–15: post-market monitoring, robustness testing, incident reporting |
-| 🟡 Customer Support Chatbot | **LIMITED RISK** | Article 50(1) — conversational AI | Mandatory disclosure: users must know they are interacting with AI |
+| 🔴 Credit Scoring Engine | **HIGH RISK** | Annex III §5(b) - creditworthiness assessment | Articles 9–15: risk management system, data governance, human oversight, transparency, logging |
+| 🔴 Fraud Detection System | **HIGH RISK** | Annex III §5(b) - financial services | Articles 9–15: post-market monitoring, robustness testing, incident reporting |
+| 🟡 Customer Support Chatbot | **LIMITED RISK** | Article 50(1) - conversational AI | Mandatory disclosure: users must know they are interacting with AI |
 | 🟢 Marketing Personalisation AI | **MINIMAL RISK** | No Annex III classification | No mandatory obligations; voluntary codes of conduct encouraged |
 
-> **Classification insight:** NP-001 and NP-002 are classified HIGH RISK not because of poor design, but because of *where* they operate (financial services) and *what* they decide (access to credit and funds). Under the EU AI Act, context determines classification — not quality.
+> **Classification insight:** NP-001 and NP-002 are classified HIGH RISK not because of poor design, but because of *where* they operate (financial services) and *what* they decide (access to credit and funds). Under the EU AI Act, context determines classification - not quality.
 
 → Full classification reasoning: [`docs/eu_ai_act_classification.md`](docs/eu_ai_act_classification.md)
 
@@ -122,7 +122,7 @@ Controls were applied proportionate to each system's risk tier across all four N
 
 ```mermaid
 quadrantChart
-    title NIST AI RMF — Control Coverage vs Risk Level
+    title NIST AI RMF - Control Coverage vs Risk Level
     x-axis Low Risk --> High Risk
     y-axis Minimal Controls --> Full Governance Suite
     quadrant-1 Full Governance
@@ -142,7 +142,7 @@ quadrantChart
 | 🟡 Customer Support Chatbot | 4 | 4 | 2 | 3 | **13** |
 | 🟢 Marketing Personalisation AI | 4 | 4 | 2 | 3 | **13** |
 
-The HIGH RISK systems received the full 20-control governance suite. The proportionality principle was applied deliberately — applying full controls to low-risk systems creates compliance overhead without reducing actual risk.
+The HIGH RISK systems received the full 20-control governance suite. The proportionality principle was applied deliberately - applying full controls to low-risk systems creates compliance overhead without reducing actual risk.
 
 → Full control mapping: [`docs/nist_rmf_mapping.md`](docs/nist_rmf_mapping.md)
 
@@ -166,7 +166,7 @@ The inventory is validated by a Python engine that runs 12 checks across every s
 [✓] [NP-003] All mandatory fields populated
 [✓] [NP-004] All mandatory fields populated
 
-✅ Validation PASSED — All 12 checks completed successfully.
+✅ Validation PASSED - All 12 checks completed successfully.
 ```
 
 If any check fails, the script identifies the exact system and field so issues can be corrected before the report goes to leadership.
@@ -175,7 +175,7 @@ If any check fails, the script identifies the exact system and field so issues c
 
 ## 📊 Executive Governance Report
 
-The final output is a board-ready governance report generated automatically from validated inventory data — no manual formatting.
+The final output is a board-ready governance report generated automatically from validated inventory data - no manual formatting.
 
 **Key findings from the NorthPoint Financial Services assessment:**
 - **2 of 4 systems** (50%) carry HIGH RISK classification under EU AI Act Annex III
@@ -191,9 +191,9 @@ The final output is a board-ready governance report generated automatically from
 
 This inventory established *what* NorthPoint is running and *what tier* each system falls into.
 
-**Phase 2 goes deeper:** a full risk assessment on the two HIGH RISK systems — likelihood/impact analysis, bias and fairness evaluation, EU AI Act Article 9 compliance review, and a board-level governance memo.
+**Phase 2 goes deeper:** a full risk assessment on the two HIGH RISK systems - likelihood/impact analysis, bias and fairness evaluation, EU AI Act Article 9 compliance review and a board-level governance memo.
 
-**[→ Phase 2: AI Risk Assessment — NorthPoint Financial Services](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
+**[→ Phase 2: AI Risk Assessment - NorthPoint Financial Services](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
 
 ---
 
@@ -241,10 +241,10 @@ AI-System-Inventory/
 | Framework | Resource |
 |---|---|
 | EU AI Act (Official Text) | [EUR-Lex 2024/1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) |
-| EU AI Act Annex III — High-Risk Systems | [EUR-Lex Annex III](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#anx_III) |
+| EU AI Act Annex III - High-Risk Systems | [EUR-Lex Annex III](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#anx_III) |
 | NIST AI Risk Management Framework 1.0 | [airmf.nist.gov](https://airmf.nist.gov/) |
 | NIST AI RMF Playbook | [airc.nist.gov](https://airc.nist.gov/Docs/2) |
-| ISO/IEC 42001:2023 — AI Management Systems | [iso.org/standard/81230](https://www.iso.org/standard/81230.html) |
+| ISO/IEC 42001:2023 - AI Management Systems | [iso.org/standard/81230](https://www.iso.org/standard/81230.html) |
 
 ---
 
