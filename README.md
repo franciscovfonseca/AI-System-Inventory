@@ -19,7 +19,7 @@ Modern, corporate, minimal. No people. Color accents: electric blue and white."
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)]()
 
-**Phase 1 of an end-to-end AI Governance Programme · → [Phase 2: AI Risk Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
+**Phase 1 of an end-to-end AI Governance Programme**
 
 </div>
 
