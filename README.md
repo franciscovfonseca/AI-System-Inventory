@@ -193,7 +193,7 @@ This inventory established *what* NorthPoint is running and *what tier* each sys
 
 **Phase 2 goes deeper:** a full risk assessment on the two HIGH RISK systems - likelihood/impact analysis, bias and fairness evaluation, EU AI Act Article 9 compliance review and a board-level governance memo.
 
-**[→ Phase 2: AI Risk Assessment - NorthPoint Financial Services](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
+**→ [Phase 2: AI Risk Assessment - NorthPoint Financial Services](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
 
 ---
 
@@ -254,6 +254,6 @@ AI-System-Inventory/
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
-*Part of an ongoing AI Governance Portfolio · [View all projects →](https://github.com/franciscovfonseca)*
+*Part of an ongoing AI Security and AI Governance Portfolio · [View all projects →](https://github.com/franciscovfonseca)*
 
 </div>
