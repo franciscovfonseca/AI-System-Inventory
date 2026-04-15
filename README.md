@@ -8,7 +8,7 @@ Dark navy blue background (#0d1117). Subtle grid or circuit-board pattern.
 Icons representing AI systems, compliance documents and data flows. 
 Modern, corporate, minimal. No people. Color accents: electric blue and white."
 -->
-<img src="banner.png" alt="AI System Inventory & Classification Engine" width="100%"/>
+<img src="docs/banner.png" alt="AI System Inventory & Classification Engine" width="100%"/>
 
 # 🤖 AI System Inventory & Classification Engine
 
