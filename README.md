@@ -1,14 +1,7 @@
 <div align="center">
 
-<!-- BANNER: Generate this image using Google Flow with the prompt below and save as banner.png in the repo root
-GOOGLE FLOW PROMPT:
-"A clean, professional dark-themed banner for a GitHub repository. Wide format (1280x640px). 
-Title text: 'AI System Inventory & Classification Engine'. Subtitle: 'EU AI Act · NIST AI RMF · Financial Services'.
-Dark navy blue background (#0d1117). Subtle grid or circuit-board pattern. 
-Icons representing AI systems, compliance documents and data flows. 
-Modern, corporate, minimal. No people. Color accents: electric blue and white."
--->
-<img src="docs/banner.png" alt="AI System Inventory & Classification Engine" width="100%"/>
+
+<img src="docs/banner2.png" alt="AI System Inventory & Classification Engine" width="100%"/>
 
 # 🤖 AI System Inventory & Classification Engine
 
