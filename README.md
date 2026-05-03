@@ -1,7 +1,7 @@
 <div align="center">
 
 
-<img src="docs/banner2.png" alt="AI System Inventory & Classification Engine" width="100%"/>
+<img src="docs/banner-AI-system-inventory.png" alt="AI System Inventory & Classification Engine" width="100%"/>
 
 # 🤖 AI System Inventory & Classification Engine
 
