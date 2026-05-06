@@ -31,13 +31,13 @@ from pathlib import Path
 # Annex III sector keywords that trigger HIGH RISK classification when
 # the system also affects individuals AND makes automated decisions.
 ANNEX_III_SECTORS = {
-    "Financial Services": "Annex III §5(b) — AI systems used in credit scoring, insurance, or access to financial services",
-    "Employment": "Annex III §4 — AI systems used in recruitment, performance evaluation, or employment decisions",
-    "Education": "Annex III §3 — AI systems used in access to education or evaluation of students",
-    "Law Enforcement": "Annex III §6 — AI systems used in law enforcement or border control",
-    "Healthcare": "Annex III §5(a) — AI systems used in medical devices or healthcare",
-    "Critical Infrastructure": "Annex III §2 — AI in safety components of critical infrastructure",
-    "Justice": "Annex III §8 — AI used in administration of justice",
+    "Financial Services": "Annex III §5(b) - AI systems used in credit scoring, insurance or access to financial services",
+    "Employment": "Annex III §4 - AI systems used in recruitment, performance evaluation or employment decisions",
+    "Education": "Annex III §3 - AI systems used in access to education or evaluation of students",
+    "Law Enforcement": "Annex III §6 - AI systems used in law enforcement or border control",
+    "Healthcare": "Annex III §5(a) - AI systems used in medical devices or healthcare",
+    "Critical Infrastructure": "Annex III §2 - AI in safety components of critical infrastructure",
+    "Justice": "Annex III §8 - AI used in administration of justice",
 }
 
 # Systems interacting with humans via generated content are LIMITED RISK
@@ -65,24 +65,24 @@ def classify_system(system: dict) -> dict:
     if sector in ANNEX_III_SECTORS and affects_individuals:
         annex_ref = ANNEX_III_SECTORS[sector]
         obligations = [
-            "Article 9  — Establish a risk management system for the lifecycle of the AI system",
-            "Article 10 — Implement data governance practices (quality, relevance, bias checks)",
-            "Article 11 — Maintain technical documentation before placing on market",
-            "Article 12 — Enable logging and traceability of system operations",
-            "Article 13 — Ensure transparency to users about the system's nature and limitations",
-            "Article 14 — Implement meaningful human oversight mechanisms",
-            "Article 15 — Ensure accuracy, robustness, and cybersecurity throughout lifecycle",
+            "Article 9  - Establish a risk management system for the lifecycle of the AI system",
+            "Article 10 - Implement data governance practices (quality, relevance, bias checks)",
+            "Article 11 - Maintain technical documentation before placing on market",
+            "Article 12 - Enable logging and traceability of system operations",
+            "Article 13 - Ensure transparency to users about the system's nature and limitations",
+            "Article 14 - Implement meaningful human oversight mechanisms",
+            "Article 15 - Ensure accuracy, robustness and cybersecurity throughout lifecycle",
         ]
         if automated_decision:
             reasoning = (
-                f"'{system['system_name']}' operates in the {sector} sector (covered by {annex_ref.split('—')[0].strip()}), "
-                f"directly affects individuals, and makes automated decisions without requiring prior human review. "
+                f"'{system['system_name']}' operates in the {sector} sector (covered by {annex_ref.split('-')[0].strip()}), "
+                f"directly affects individuals and makes automated decisions without requiring prior human review. "
                 f"This combination places it firmly within the HIGH RISK tier under Annex III. "
                 f"The organisation must satisfy Articles 9–15 obligations before deployment and on an ongoing basis."
             )
         else:
             reasoning = (
-                f"'{system['system_name']}' operates in the {sector} sector (covered by {annex_ref.split('—')[0].strip()}) "
+                f"'{system['system_name']}' operates in the {sector} sector (covered by {annex_ref.split('-')[0].strip()}) "
                 f"and affects individuals, but does not make fully automated decisions. "
                 f"However, its sector classification alone is sufficient to trigger HIGH RISK status under Annex III. "
                 f"Articles 9–15 obligations apply."
@@ -100,8 +100,8 @@ def classify_system(system: dict) -> dict:
         # humans must disclose their AI nature under Article 50.
         if any(keyword in name_lower for keyword in LIMITED_RISK_KEYWORDS):
             obligations = [
-                "Article 50(1) — Inform users they are interacting with an AI system (not a human)",
-                "Article 50(2) — Disclose when AI-generated content (text, images) is produced",
+                "Article 50(1) - Inform users they are interacting with an AI system (not a human)",
+                "Article 50(2) - Disclose when AI-generated content (text, images) is produced",
             ]
             reasoning = (
                 f"'{system['system_name']}' interacts directly with customers via a conversational interface "
@@ -111,7 +111,7 @@ def classify_system(system: dict) -> dict:
             )
             return {
                 "risk_tier": "LIMITED RISK",
-                "annex_ref": "Article 50 — Transparency obligations for certain AI systems",
+                "annex_ref": "Article 50 - Transparency obligations for certain AI systems",
                 "obligations": obligations,
                 "reasoning": reasoning,
             }
@@ -119,7 +119,7 @@ def classify_system(system: dict) -> dict:
     # --- Default: MINIMAL RISK ---
     return {
         "risk_tier": "MINIMAL RISK",
-        "annex_ref": "No mandatory provisions — Recital 48 and voluntary codes of practice apply",
+        "annex_ref": "No mandatory provisions - Recital 48 and voluntary codes of practice apply",
         "obligations": [
             "No mandatory obligations under the EU AI Act",
             "Voluntary: Consider adopting codes of conduct under Article 95",
@@ -127,7 +127,7 @@ def classify_system(system: dict) -> dict:
         ],
         "reasoning": (
             f"'{system['system_name']}' does not appear in Annex III prohibited or high-risk categories, "
-            f"does not interact with individuals via a conversational interface, and does not make decisions "
+            f"does not interact with individuals via a conversational interface and does not make decisions "
             f"that significantly affect individuals' rights or access to services. "
             f"It falls into the MINIMAL RISK tier. No mandatory EU AI Act obligations apply, "
             f"though voluntary codes of practice are encouraged."
@@ -144,7 +144,7 @@ def print_classification_table(systems: list) -> None:
     }
 
     print("\n" + "=" * 70)
-    print("  EU AI Act Risk Classification — NovaPay")
+    print("  EU AI Act Risk Classification - NovaPay")
     print("=" * 70)
     print(f"  {'System ID':<10} {'System Name':<35} {'Risk Tier'}")
     print("-" * 70)
