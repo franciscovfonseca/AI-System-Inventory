@@ -6,10 +6,10 @@ Maps each NovaPay AI system to the four functions of the
 NIST AI Risk Management Framework 1.0 (NIST AI RMF).
 
 Functions:
-  GOVERN  — Policies, culture, accountability, and risk tolerance
-  MAP     — Categorisation, context, and stakeholder impact analysis
-  MEASURE — Testing, evaluation, monitoring, and bias metrics
-  MANAGE  — Risk response, incident handling, and system review
+  GOVERN  - Policies, culture, accountability and risk tolerance
+  MAP     - Categorisation, context and stakeholder impact analysis
+  MEASURE - Testing, evaluation, monitoring and bias metrics
+  MANAGE  - Risk response, incident handling and system review
 
 Output:
   - Console table showing RMF function coverage per system
@@ -31,7 +31,7 @@ from pathlib import Path
 
 RMF_CONTROLS = {
     "GOVERN": {
-        "description": "Establish organisational policies, roles, accountability structures, and risk tolerance for AI.",
+        "description": "Establish organisational policies, roles, accountability structures and risk tolerance for AI.",
         "subcategories": {
             "GOV-1.1": "Policies and processes exist to map the organisation's AI risk appetite and risk tolerance.",
             "GOV-1.2": "Accountability mechanisms for AI risks are established within the organisation.",
@@ -41,17 +41,17 @@ RMF_CONTROLS = {
         },
     },
     "MAP": {
-        "description": "Understand the context, stakeholder impact, and risk categorisation of each AI system.",
+        "description": "Understand the context, stakeholder impact and risk categorisation of each AI system.",
         "subcategories": {
-            "MAP-1.1": "The purpose, scope, and intended use of the AI system are documented.",
+            "MAP-1.1": "The purpose, scope and intended use of the AI system are documented.",
             "MAP-1.5": "Organisational risk tolerance for AI is applied in context when categorising systems.",
-            "MAP-2.1": "Scientific findings, user feedback, and real-world data are used to understand the system's context.",
+            "MAP-2.1": "Scientific findings, user feedback and real-world data are used to understand the system's context.",
             "MAP-3.1": "Potential benefits and costs of the AI system are identified and documented.",
             "MAP-5.1": "Likelihood and magnitude of each identified risk is estimated and documented.",
         },
     },
     "MEASURE": {
-        "description": "Evaluate AI system risks using quantitative and qualitative methods, testing, and metrics.",
+        "description": "Evaluate AI system risks using quantitative and qualitative methods, testing and metrics.",
         "subcategories": {
             "MS-1.1": "Evaluation approaches are defined before and during deployment.",
             "MS-2.1": "Test sets and evaluation datasets are established and maintained.",
@@ -61,11 +61,11 @@ RMF_CONTROLS = {
         },
     },
     "MANAGE": {
-        "description": "Respond to, recover from, and continuously improve AI risk posture.",
+        "description": "Respond to, recover from and continuously improve AI risk posture.",
         "subcategories": {
             "MG-1.1": "Risks identified in Map and Measure functions are prioritised and treated.",
             "MG-2.1": "Procedures exist for responding to AI incidents and near-misses.",
-            "MG-2.4": "AI system updates, rollbacks, and decommissioning procedures are documented.",
+            "MG-2.4": "AI system updates, rollbacks and decommissioning procedures are documented.",
             "MG-3.1": "Processes are in place to monitor and evaluate AI systems on an ongoing basis.",
             "MG-4.1": "Risk management activities are continually reviewed and updated based on new information.",
         },
@@ -86,13 +86,13 @@ def map_system_to_rmf(system: dict) -> dict:
 
     mapping = {}
 
-    # GOVERN — applies to all systems
+    # GOVERN - applies to all systems
     govern_controls = ["GOV-1.1", "GOV-1.2", "GOV-2.1", "GOV-4.1"]
     if risk_tier == "HIGH RISK":
         govern_controls.append("GOV-6.1")  # Incident escalation mandatory for high-risk
     mapping["GOVERN"] = govern_controls
 
-    # MAP — applies to all systems; depth increases with risk tier
+    # MAP - applies to all systems; depth increases with risk tier
     map_controls = ["MAP-1.1", "MAP-1.5", "MAP-3.1"]
     if affects_individuals:
         map_controls.append("MAP-2.1")
@@ -100,7 +100,7 @@ def map_system_to_rmf(system: dict) -> dict:
         map_controls.append("MAP-5.1")
     mapping["MAP"] = sorted(set(map_controls))
 
-    # MEASURE — depth increases with automated decisions and high risk
+    # MEASURE - depth increases with automated decisions and high risk
     measure_controls = ["MS-1.1", "MS-4.1"]
     if automated:
         measure_controls += ["MS-2.1", "MS-2.5", "MS-2.6"]
@@ -111,7 +111,7 @@ def map_system_to_rmf(system: dict) -> dict:
             measure_controls.append("MS-2.5")
     mapping["MEASURE"] = sorted(set(measure_controls))
 
-    # MANAGE — all systems need basic management; high-risk needs full suite
+    # MANAGE - all systems need basic management; high-risk needs full suite
     manage_controls = ["MG-1.1", "MG-3.1", "MG-4.1"]
     if risk_tier == "HIGH RISK" or automated:
         manage_controls += ["MG-2.1", "MG-2.4"]
@@ -130,7 +130,7 @@ def print_rmf_table(systems: list) -> None:
     }
 
     print("\n" + "=" * 70)
-    print("  NIST AI RMF Function Mapping — NovaPay")
+    print("  NIST AI RMF Function Mapping - NovaPay")
     print("=" * 70)
 
     for system in systems:
