@@ -18,7 +18,7 @@ Output: docs/governance_report.md
 Usage:
   python scripts/generate_report.py
 
-Note: Run classify_systems.py, map_to_rmf.py, and validate_inventory.py
+Note: Run classify_systems.py, map_to_rmf.py and validate_inventory.py
       before running this script.
 """
 
@@ -38,11 +38,11 @@ def build_header(inventory: dict) -> str:
     version = inventory.get("inventory_version", "1.0")
     date = datetime.now().strftime("%d %B %Y")
 
-    return f"""# AI Governance Report — {org}
+    return f"""# AI Governance Report - {org}
 
 **Report Version:** {version}  
 **Generated:** {date}  
-**Classification:** Internal — Restricted  
+**Classification:** Internal - Restricted  
 **Owner:** AI Governance Team  
 
 ---
@@ -77,7 +77,7 @@ def build_executive_summary(systems: list) -> str:
         summary += f"- **{len(high_risk)} system(s) are classified HIGH RISK** under the EU AI Act and require immediate compliance action under Articles 9–15. These systems operate in the Financial Services sector and directly affect individuals' access to credit and financial services.\n"
 
     if limited_risk:
-        summary += f"- **{len(limited_risk)} system(s) are classified LIMITED RISK** and must comply with Article 50 transparency obligations — specifically, users must be informed they are interacting with an AI system.\n"
+        summary += f"- **{len(limited_risk)} system(s) are classified LIMITED RISK** and must comply with Article 50 transparency obligations - specifically, users must be informed they are interacting with an AI system.\n"
 
     if automated:
         summary += f"- **{len(automated)} system(s) make automated decisions** affecting individuals. Human oversight mechanisms are documented for all of these systems.\n"
@@ -117,7 +117,7 @@ def build_classification_section(systems: list) -> str:
         tier = c.get("risk_tier", "UNCLASSIFIED")
         icon = tier_emoji.get(tier, "⚪")
         ref = c.get("annex_ref", "N/A")
-        section += f"| {s['system_id']} — {s['system_name']} | {icon} **{tier}** | {ref} |\n"
+        section += f"| {s['system_id']} - {s['system_name']} | {icon} **{tier}** | {ref} |\n"
 
     section += "\n"
 
@@ -127,7 +127,7 @@ def build_classification_section(systems: list) -> str:
         tier = c.get("risk_tier", "UNCLASSIFIED")
         icon = tier_emoji.get(tier, "⚪")
 
-        section += f"### {icon} {s['system_id']} — {s['system_name']}\n\n"
+        section += f"### {icon} {s['system_id']} - {s['system_name']}\n\n"
         section += f"**Tier:** {tier}  \n"
         section += f"**Reference:** {c.get('annex_ref', 'N/A')}  \n\n"
         section += f"**Reasoning:** {c.get('reasoning', 'N/A')}\n\n"
@@ -146,7 +146,7 @@ def build_rmf_section(systems: list) -> str:
     section = "## NIST AI RMF Control Mapping\n\n"
     section += "Mapped against NIST AI Risk Management Framework 1.0 (January 2023).\n\n"
 
-    # Summary table — show which functions apply per system
+    # Summary table - show which functions apply per system
     section += "| System | GOVERN | MAP | MEASURE | MANAGE |\n"
     section += "|---|---|---|---|---|\n"
     for s in systems:
@@ -155,14 +155,14 @@ def build_rmf_section(systems: list) -> str:
         mp = f"{len(rmf.get('MAP', []))} controls"
         ms = f"{len(rmf.get('MEASURE', []))} controls"
         mg = f"{len(rmf.get('MANAGE', []))} controls"
-        section += f"| {s['system_id']} — {s['system_name']} | {gov} | {mp} | {ms} | {mg} |\n"
+        section += f"| {s['system_id']} - {s['system_name']} | {gov} | {mp} | {ms} | {mg} |\n"
 
     section += "\n"
 
     # Per-system RMF detail
     for s in systems:
         rmf = s.get("nist_rmf_mapping", {})
-        section += f"### {s['system_id']} — {s['system_name']}\n\n"
+        section += f"### {s['system_id']} - {s['system_name']}\n\n"
 
         for function, controls in rmf.items():
             icon = function_icons.get(function, "⚪")
@@ -183,25 +183,25 @@ def build_recommended_actions(systems: list) -> str:
     limited_risk = [s for s in systems if s.get("eu_ai_act_classification", {}).get("risk_tier") == "LIMITED RISK"]
 
     if high_risk:
-        section += "### 🔴 HIGH PRIORITY — HIGH RISK Systems\n\n"
+        section += "### 🔴 HIGH PRIORITY - HIGH RISK Systems\n\n"
         for s in high_risk:
-            section += f"**{s['system_id']} — {s['system_name']}**\n\n"
+            section += f"**{s['system_id']} - {s['system_name']}**\n\n"
             section += "- [ ] Conduct and document a formal risk management assessment (Article 9)\n"
             section += "- [ ] Review and document data governance practices including bias checks (Article 10)\n"
             section += "- [ ] Produce and maintain technical documentation (Article 11)\n"
             section += "- [ ] Verify logging and traceability mechanisms are active (Article 12)\n"
-            section += "- [ ] Audit the human oversight mechanism — confirm it is meaningful, not nominal (Article 14)\n"
+            section += "- [ ] Audit the human oversight mechanism - confirm it is meaningful, not nominal (Article 14)\n"
             section += f"- [ ] Schedule next review: within {s.get('review_cycle', '6 months')}\n\n"
 
     if limited_risk:
-        section += "### 🟡 MEDIUM PRIORITY — LIMITED RISK Systems\n\n"
+        section += "### 🟡 MEDIUM PRIORITY - LIMITED RISK Systems\n\n"
         for s in limited_risk:
-            section += f"**{s['system_id']} — {s['system_name']}**\n\n"
+            section += f"**{s['system_id']} - {s['system_name']}**\n\n"
             section += "- [ ] Confirm the chatbot interface displays an AI disclosure to all users (Article 50)\n"
             section += "- [ ] Review vendor contract to confirm Article 50 compliance obligations are covered\n"
             section += "- [ ] Add AI disclosure to in-app and web chat interface if not already present\n\n"
 
-    section += "### 🟢 STANDARD — ALL Systems\n\n"
+    section += "### 🟢 STANDARD - ALL Systems\n\n"
     section += "- [ ] Formally assign this inventory to the AI Governance Committee for ongoing ownership\n"
     section += "- [ ] Schedule quarterly governance reviews for HIGH and LIMITED RISK systems\n"
     section += "- [ ] Conduct annual review of MINIMAL RISK systems\n"
@@ -229,7 +229,7 @@ def build_review_schedule(systems: list) -> str:
         cycle = s.get("review_cycle", "12 months")
         delta = cycle_to_delta.get(cycle, timedelta(days=365))
         next_review = (today + delta).strftime("%B %Y")
-        section += f"| {s['system_id']} — {s['system_name']} | {tier} | {cycle} | {next_review} |\n"
+        section += f"| {s['system_id']} - {s['system_name']} | {tier} | {cycle} | {next_review} |\n"
 
     section += "\n---\n\n"
     return section
