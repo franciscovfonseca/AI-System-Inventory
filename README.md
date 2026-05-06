@@ -180,16 +180,6 @@ The final output is a board-ready governance report generated automatically from
 
 ---
 
-## 🔗 Phase 2: AI Risk Assessment
-
-This inventory established *what* NorthPoint is running and *what tier* each system falls into.
-
-**Phase 2 goes deeper:** a full risk assessment on the two HIGH RISK systems - likelihood/impact analysis, bias and fairness evaluation, EU AI Act Article 9 compliance review and a board-level governance memo.
-
-**→ [Phase 2: AI Risk Assessment - NorthPoint Financial Services](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
-
----
-
 ## 📁 Repository Structure
 
 ```
