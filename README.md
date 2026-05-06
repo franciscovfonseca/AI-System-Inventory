@@ -26,7 +26,7 @@ This project delivered that answer. I designed and executed a complete AI system
 
 > **The business impact:** NorthPoint can now demonstrate to regulators, auditors and the board exactly which AI systems it operates, what risk tier each carries, what obligations apply and what controls are in place - with documented, auditable evidence for every decision.
 
-This project is **Phase 1** of an ongoing AI governance programme. Phase 2 applies deep risk assessment methodology to the two HIGH RISK systems identified here. → [View Phase 2](https://github.com/franciscovfonseca/AI-Risk-Assessment)
+This project is **Phase 1** of an ongoing AI governance programme. Phase 2 applies deep risk assessment methodology to the two HIGH RISK systems identified here.
 
 ---
 
