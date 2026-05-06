@@ -17,8 +17,8 @@ Usage:
   python scripts/validate_inventory.py
 
 Exit codes:
-  0 — All checks passed
-  1 — One or more checks failed (details printed to stdout)
+  0 - All checks passed
+  1 - One or more checks failed (details printed to stdout)
 """
 
 import json
@@ -82,7 +82,7 @@ def validate_inventory(inventory: dict) -> tuple[list, list]:
     Validate the inventory dict.
 
     Returns:
-      (passed_checks, failed_checks) — lists of strings describing each result.
+      (passed_checks, failed_checks) - lists of strings describing each result.
     """
     passed = []
     failed = []
@@ -114,7 +114,7 @@ def validate_inventory(inventory: dict) -> tuple[list, list]:
             if value is None or value == "" or value == []:
                 missing.append(field)
         if missing:
-            failed.append(f"[{sid}] {name} — Missing mandatory fields: {missing}")
+            failed.append(f"[{sid}] {name} - Missing mandatory fields: {missing}")
         else:
             passed.append(f"[{sid}] All mandatory fields populated")
 
@@ -125,7 +125,7 @@ def validate_inventory(inventory: dict) -> tuple[list, list]:
         if risk_tier == "HIGH RISK":
             owner = system.get("system_owner", "").strip()
             if not owner or owner.lower() in ("tbc", "unknown", "n/a", ""):
-                failed.append(f"[{sid}] {name} — HIGH RISK system has no named system_owner")
+                failed.append(f"[{sid}] {name} - HIGH RISK system has no named system_owner")
             else:
                 passed.append(f"[{sid}] HIGH RISK system has a named owner: '{owner}'")
 
@@ -134,12 +134,12 @@ def validate_inventory(inventory: dict) -> tuple[list, list]:
             months = parse_review_months(review_cycle)
             if months is None:
                 failed.append(
-                    f"[{sid}] {name} — Could not parse review_cycle '{review_cycle}'. "
+                    f"[{sid}] {name} - Could not parse review_cycle '{review_cycle}'. "
                     f"Use a standard value (e.g. '3 months', '6 months')."
                 )
             elif months > HIGH_RISK_MAX_REVIEW_MONTHS:
                 failed.append(
-                    f"[{sid}] {name} — HIGH RISK system has review_cycle '{review_cycle}' "
+                    f"[{sid}] {name} - HIGH RISK system has review_cycle '{review_cycle}' "
                     f"({months} months), which exceeds the {HIGH_RISK_MAX_REVIEW_MONTHS}-month maximum."
                 )
             else:
@@ -150,7 +150,7 @@ def validate_inventory(inventory: dict) -> tuple[list, list]:
             notes = system.get("human_oversight_notes", "").strip()
             if not notes or len(notes) < 20:
                 failed.append(
-                    f"[{sid}] {name} — Automated decision system is missing human_oversight_notes "
+                    f"[{sid}] {name} - Automated decision system is missing human_oversight_notes "
                     f"(field is blank or too short). Document the human oversight mechanism."
                 )
             else:
@@ -184,7 +184,7 @@ def main():
 
     # Print results
     print("\n" + "=" * 60)
-    print("  AI Inventory Validation — NovaPay")
+    print("  AI Inventory Validation - NovaPay")
     print("=" * 60 + "\n")
 
     for check in passed:
@@ -194,10 +194,10 @@ def main():
         print()
         for check in failed:
             print(f"  [✗] {check}")
-        print(f"\n  Validation FAILED — {len(failed)} issue(s) found. Resolve before generating report.\n")
+        print(f"\n  Validation FAILED - {len(failed)} issue(s) found. Resolve before generating report.\n")
         sys.exit(1)
     else:
-        print(f"\n  Validation PASSED — All {len(passed)} checks completed successfully.")
+        print(f"\n  Validation PASSED - All {len(passed)} checks completed successfully.")
         print("  Ready to generate governance report.\n")
         sys.exit(0)
 
