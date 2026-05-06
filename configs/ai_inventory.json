@@ -14,7 +14,7 @@
         "Income verification records",
         "Transaction history"
       ],
-      "business_impact": "HIGH — incorrect scoring may deny individuals access to credit or result in financial losses for NovaPay",
+      "business_impact": "HIGH - incorrect scoring may deny individuals access to credit or result in financial losses for NovaPay",
       "system_owner": "Head of Credit Risk",
       "review_cycle": "6 months",
       "affects_individuals": true,
@@ -25,15 +25,15 @@
       "vendor_or_inhouse": "In-house",
       "eu_ai_act_classification": {
         "risk_tier": "HIGH RISK",
-        "annex_ref": "Annex III §5(b) — AI systems used in credit scoring, insurance, or access to financial services",
+        "annex_ref": "Annex III §5(b) - AI systems used in credit scoring, insurance, or access to financial services",
         "obligations": [
-          "Article 9  — Establish a risk management system for the lifecycle of the AI system",
-          "Article 10 — Implement data governance practices (quality, relevance, bias checks)",
-          "Article 11 — Maintain technical documentation before placing on market",
-          "Article 12 — Enable logging and traceability of system operations",
-          "Article 13 — Ensure transparency to users about the system's nature and limitations",
-          "Article 14 — Implement meaningful human oversight mechanisms",
-          "Article 15 — Ensure accuracy, robustness, and cybersecurity throughout lifecycle"
+          "Article 9  - Establish a risk management system for the lifecycle of the AI system",
+          "Article 10 - Implement data governance practices (quality, relevance, bias checks)",
+          "Article 11 - Maintain technical documentation before placing on market",
+          "Article 12 - Enable logging and traceability of system operations",
+          "Article 13 - Ensure transparency to users about the system's nature and limitations",
+          "Article 14 - Implement meaningful human oversight mechanisms",
+          "Article 15 - Ensure accuracy, robustness, and cybersecurity throughout lifecycle"
         ],
         "reasoning": "'Credit Scoring Engine' operates in the Financial Services sector (covered by Annex III §5(b)), directly affects individuals, and makes automated decisions without requiring prior human review. This combination places it firmly within the HIGH RISK tier under Annex III. The organisation must satisfy Articles 9–15 obligations before deployment and on an ongoing basis."
       },
@@ -79,7 +79,7 @@
         "Behavioural analytics",
         "Merchant category codes"
       ],
-      "business_impact": "HIGH — false positives block legitimate transactions; false negatives allow fraud losses",
+      "business_impact": "HIGH - false positives block legitimate transactions; false negatives allow fraud losses",
       "system_owner": "Head of Financial Crime",
       "review_cycle": "3 months",
       "affects_individuals": true,
@@ -90,15 +90,15 @@
       "vendor_or_inhouse": "Hybrid (vendor model + in-house rules)",
       "eu_ai_act_classification": {
         "risk_tier": "HIGH RISK",
-        "annex_ref": "Annex III §5(b) — AI systems used in credit scoring, insurance, or access to financial services",
+        "annex_ref": "Annex III §5(b) - AI systems used in credit scoring, insurance, or access to financial services",
         "obligations": [
-          "Article 9  — Establish a risk management system for the lifecycle of the AI system",
-          "Article 10 — Implement data governance practices (quality, relevance, bias checks)",
-          "Article 11 — Maintain technical documentation before placing on market",
-          "Article 12 — Enable logging and traceability of system operations",
-          "Article 13 — Ensure transparency to users about the system's nature and limitations",
-          "Article 14 — Implement meaningful human oversight mechanisms",
-          "Article 15 — Ensure accuracy, robustness, and cybersecurity throughout lifecycle"
+          "Article 9  - Establish a risk management system for the lifecycle of the AI system",
+          "Article 10 - Implement data governance practices (quality, relevance, bias checks)",
+          "Article 11 - Maintain technical documentation before placing on market",
+          "Article 12 - Enable logging and traceability of system operations",
+          "Article 13 - Ensure transparency to users about the system's nature and limitations",
+          "Article 14 - Implement meaningful human oversight mechanisms",
+          "Article 15 - Ensure accuracy, robustness, and cybersecurity throughout lifecycle"
         ],
         "reasoning": "'Fraud Detection System' operates in the Financial Services sector (covered by Annex III §5(b)), directly affects individuals, and makes automated decisions without requiring prior human review. This combination places it firmly within the HIGH RISK tier under Annex III. The organisation must satisfy Articles 9–15 obligations before deployment and on an ongoing basis."
       },
@@ -143,7 +143,7 @@
         "Conversation history",
         "CRM records"
       ],
-      "business_impact": "MEDIUM — poor responses increase churn and support ticket volume; no direct financial decisions made",
+      "business_impact": "MEDIUM - poor responses increase churn and support ticket volume; no direct financial decisions made",
       "system_owner": "Head of Customer Experience",
       "review_cycle": "12 months",
       "affects_individuals": true,
@@ -154,10 +154,10 @@
       "vendor_or_inhouse": "Vendor (third-party LLM)",
       "eu_ai_act_classification": {
         "risk_tier": "LIMITED RISK",
-        "annex_ref": "Article 50 — Transparency obligations for certain AI systems",
+        "annex_ref": "Article 50 - Transparency obligations for certain AI systems",
         "obligations": [
-          "Article 50(1) — Inform users they are interacting with an AI system (not a human)",
-          "Article 50(2) — Disclose when AI-generated content (text, images) is produced"
+          "Article 50(1) - Inform users they are interacting with an AI system (not a human)",
+          "Article 50(2) - Disclose when AI-generated content (text, images) is produced"
         ],
         "reasoning": "'Customer Support Chatbot' interacts directly with customers via a conversational interface and is powered by a third-party LLM vendor. Under Article 50 of the EU AI Act, the organisation must clearly disclose to users that they are interacting with an AI system and not a human. No Annex III classification applies. Obligations are limited to transparency disclosures."
       },
@@ -195,7 +195,7 @@
         "Demographic segments",
         "Campaign engagement data"
       ],
-      "business_impact": "LOW — suboptimal targeting reduces campaign ROI; no direct impact on individuals' rights or access to services",
+      "business_impact": "LOW - suboptimal targeting reduces campaign ROI; no direct impact on individuals' rights or access to services",
       "system_owner": "Head of Marketing",
       "review_cycle": "12 months",
       "affects_individuals": true,
@@ -206,7 +206,7 @@
       "vendor_or_inhouse": "In-house",
       "eu_ai_act_classification": {
         "risk_tier": "MINIMAL RISK",
-        "annex_ref": "No mandatory provisions — Recital 48 and voluntary codes of practice apply",
+        "annex_ref": "No mandatory provisions - Recital 48 and voluntary codes of practice apply",
         "obligations": [
           "No mandatory obligations under the EU AI Act",
           "Voluntary: Consider adopting codes of conduct under Article 95",
