@@ -64,7 +64,7 @@ Both NP-001 and NP-002 are classified HIGH RISK under EU AI Act Annex III, Categ
 
 NP-003 (Customer Support Chatbot) is classified LIMITED RISK under Article 50(1). The sole mandatory obligation is disclosure: users must be informed they are interacting with an AI system at the start of every session.
 
-**NP-003 status:** ✅ Disclosure implemented - chatbot identifies itself as AI at session start.
+**NP-003 status:** ✅ Disclosure implemented - chatbot identifies itself as AI at session start
 
 ### 2.3 MINIMAL RISK Systems
 
