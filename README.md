@@ -26,7 +26,7 @@ This project delivered that answer. I designed and executed a complete AI system
 
 > **The business impact:** NorthPoint can now demonstrate to regulators, auditors and the board exactly which AI systems it operates, what risk tier each carries, what obligations apply and what controls are in place - with documented, auditable evidence for every decision.
 
-This project is **Phase 1** of an ongoing AI governance programme.
+This project is **Phase 1** of an ongoing AI governance programme. Phase 2 applies deep risk assessment methodology to the two HIGH RISK systems identified here. **→** [View Phase 2](https://github.com/franciscovfonseca/AI-Risk-Assessment)
 
 ---
 
@@ -180,27 +180,14 @@ The final output is a board-ready governance report generated automatically from
 
 ---
 
-## 📁 Repository Structure
+## 🔗 Phase 2: AI Risk Assessment
 
-```
-AI-System-Inventory/
-├── README.md                          ← You are here
-├── banner.png                         ← Project banner
-├── configs/
-│   ├── ai_inventory.csv               ← Structured inventory (spreadsheet-friendly)
-│   └── ai_inventory.json              ← Structured inventory (machine-readable)
-├── docs/
-│   ├── eu_ai_act_classification.md    ← Full EU AI Act classification analysis
-│   ├── nist_rmf_mapping.md            ← Full NIST AI RMF control mapping
-│   └── governance_report.md           ← Executive governance report
-├── scripts/
-│   ├── classify_systems.py            ← EU AI Act risk classifier
-│   ├── map_to_rmf.py                  ← NIST AI RMF mapper
-│   ├── validate_inventory.py          ← Governance gap validator
-│   └── generate_report.py             ← Automated report generator
-└── screenshots/
-    └── README.md                      ← Screenshot guide
-```
+This inventory established *what* NorthPoint is running and *what tier* each system falls into.
+
+**Phase 2 goes deeper:**  
+A full risk assessment on the two HIGH RISK systems - likelihood/impact analysis, bias and fairness evaluation, EU AI Act Article 9 compliance review and a board-level governance memo.
+
+**→ [Phase 2: AI Risk Assessment - NorthPoint Financial Services](https://github.com/franciscovfonseca/AI-Risk-Assessment)**
 
 ---
 
